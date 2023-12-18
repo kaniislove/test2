@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    /* body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    } */
+
+    .slide{width:100%; height: 620px; background: rgb(182, 240, 182);}
+
+    .slide .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide .swiper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      color:#333;
+    }   
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+      color:#333;
+    }
+
+    :root {
+    --swiper-navigation-size: 25px;
+    }
+
+    .swiper-pagination-bullet-active {
+      width:25px; 
+      border-radius: 20px;
+      background:#003859;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      calc (var(--swiper-navigation-size)/ 25 * 27);
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="slide">
+   <div class="swiper mySwiper">
+     <div class="swiper-wrapper">
+       <div class="swiper-slide"><a href="#"><img src="img/banner1.jpg" alt="banner1"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="img/banner2.jpg"  alt="banner2"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="img/banner3.jpg" alt="banner2"></a></div>
+     </div>
+     <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <!-- slide end -->
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>
